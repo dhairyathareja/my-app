@@ -7,11 +7,11 @@ pipeline {
 
     stages {
 
-        stage('Clone Source') {
-            steps {
-                git 'https://github.com/dhairyathareja/my-app.git'
-            }
-        }
+        // stage('Clone Source') {
+        //     steps {
+        //         git 'https://github.com/dhairyathareja/my-app.git'
+        //     }
+        // }
 
         stage('Build Docker Image') {
             steps {
