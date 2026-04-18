@@ -7,11 +7,11 @@ pipeline {
 
     stages {
 
-        // stage('Clone Source') {
-        //     steps {
-        //         git 'https://github.com/dhairyathareja/my-app.git'
-        //     }
-        // }
+        stage('Clone Source') {
+            steps {
+                git 'https://github.com/dhairyathareja/my-app.git'
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
@@ -27,7 +27,7 @@ pipeline {
             }
         }
 
-        stage('Push to Docker Hub') {
+        stage('Push to Docker Hub') { 
             steps {
                 sh 'docker push $IMAGE_NAME:latest'
             }
